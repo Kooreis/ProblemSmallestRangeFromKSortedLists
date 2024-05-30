@@ -1,5 +1,7 @@
-import heapq
+ans = -1e9, 1e9
+    right = max(row[0] for row in lists)
 
-def smallest_range(lists):
-    pq = [(row[0], i, 0) for i, row in enumerate(lists)]
-    heapq.heapify(pq)
+    while pq:
+        left, i, j = heapq.heappop(pq)
+        if right - left < ans[1] - ans[0]:
+            ans = left, right
